@@ -1,22 +1,30 @@
 <?php 
 
-require_once __DIR__ . '/Product.php';
 require_once __DIR__ . '/User.php';
-
-// Instances of the products in the cart
-$kindle_oasis = new Product ('Amazon Kindle', 'Oasis', 200);
-var_dump($kindle_oasis);
-
-$kindle_paperwhite = new Product ('Amazon Kindle', 'Paperwhite', 130);
-var_dump($kindle_paperwhite);
+require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Ereader.php';
+require_once __DIR__ . '/Kindle.php';
 
 
+// PRODUCT-RELATED ISTANCES
 
-$user1001 = new User ('mariorossi@mail.it', 'Mario');
-$user1001-> addToBasket($kindle_oasis);
+// Instance of Ereader extending Product
+$kobo_clara = new Ereader ('Kobo', 'Rakuten', 'Clara', 130);
+
+// Instance of Kindle extending Ereader
+$kindle_oasis = new Kindle ('Oasis', 200);
+
+
+// USER-RELATED ISTANCES
+
+// Instance of User
+$user1001 = new User ('mariorossi@mail.it', 'Gianni');
+
+// Instance of User->addToBasket
+$user1001->addToBasket($kindle_oasis);
+$user1001->addToBasket($kobo_clara);
 
 var_dump($user1001);
-
 
 
 ?>

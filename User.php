@@ -3,8 +3,9 @@
 class User {
     public $email;
     public $name;
+
     public $lastname;
-    public $basket = [];
+    private $basket = [];
     public $discount;
 
     public function __construct($_email, $_name) {
@@ -15,6 +16,14 @@ class User {
     public function addToBasket($item) {
         $this->basket[] = $item;
     }
+
+    // public function setDiscount() {
+    //     
+    // }
+
+    // public function getDiscount() {
+    //     
+    // }
 }
 
 ?>
