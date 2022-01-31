@@ -12,10 +12,18 @@ require_once __DIR__ . '/Kindle.php';
 // PRODUCT-RELATED ISTANCES
 
 // Instance of Ereader extending Product
-$kobo_clara = new Ereader ('Kobo', 'Rakuten', 'Clara', 130);
+try {
+    $kobo_clara = new Ereader ('Kobo', 'Rakuten', 'Clara', 130);
+} catch (Exeption $e) {
+    error_log($e);
+}
 
 // Instance of Kindle extending Ereader
-$kindle_oasis = new Kindle ('Oasis', 200);
+try {
+    $kindle_oasis = new Kindle ('Oasis', 200);
+} catch (Exeption $e) {
+    error_log($e);
+}
 
 
 // USER-RELATED ISTANCES
