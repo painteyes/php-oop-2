@@ -1,3 +1,6 @@
+<!-- Oggi pomeriggio aggiungete un trait ed una exception (con relativa gestione) all'esercizio di venerdì. -->
+
+
 <?php 
 
 require_once __DIR__ . '/User.php';

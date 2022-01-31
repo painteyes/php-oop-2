@@ -1,8 +1,11 @@
 <?php 
 
 require_once __DIR__ . '/Ereader.php';
+require_once __DIR__ . '/Bestseller.php';
+
 
 class Kindle extends Ereader {
+    use Bestseller;
 
     // override
     public $name = 'Kindle';
